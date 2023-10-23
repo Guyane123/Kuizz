@@ -5,6 +5,9 @@
     font-family: 'Albert Sans', sans-serif;
     font-weight: 600;
 
+    --main: #FCCF2C;
+    --secondary: #4556DB;
+
 }
 
 body {
