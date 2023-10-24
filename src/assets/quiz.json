@@ -1,0 +1,130 @@
+[
+    {
+        "name": "number",
+        "image": "https://cdn.pixabay.com/photo/2023/10/15/13/59/walnuts-8316999_1280.jpg",
+        "title": "Number title",
+        "link": "/quizs/quiz/number",
+        "img": "./assets/bourgeoisie.png",
+        "desc": "Calculate !",
+        "minPoint": 3,
+        "resultText": "Vous êtes intelligent !",
+        "questions": [
+            {
+                "id": "1",
+                "question": "Est-ce que 1 + 1 fait 2 ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "2",
+                "question": "Combien fait 1 + 1 ?",
+                "awaited": 2,
+                "answear": [
+                    {
+                        "value": 1,
+                        "type": "number",
+                        "content": "undefined"
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "question": "Combien fait 1 + 1 ?",
+                "answear": [
+                    { "type": "button", "content": "1", "value": 0 },
+                    { "type": "button", "content": "2", "value": 1 },
+                    { "type": "button", "content": "3", "value": 0 }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "bourgeoisie",
+        "img": "./bourgeoisie.png",
+        "image": "https://cdn.pixabay.com/photo/2023/08/13/00/50/swallowtail-8186655_1280.jpg",
+        "title": "Test de bourgeoisie !",
+        "desc": "Suis-je un bourgeois ? Comment savoir si je suis un bourgeois ? Vous vous êtes déjà posé ces questions ? Si vous souhaitez y répondre, vous êtes au bonne endroit.",
+        "minPoint": 10,
+        "link": "/quizs/quiz/bourgeoisie",
+        "resultText": "Vous êtes un bourgeois !",
+        "questions": [
+            {
+                "id": "1",
+                "question": "Avez-vous déjà participer à un rallye mondain ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 2 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "2",
+                "question": "Avez-vous déjà disfiscalisé un don à un parti politique ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 2 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "3",
+                "question": "Conaissez-vous l'héritage et la vie de vos aïeux  ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "4",
+                "question": "Faites vous des cousinades réguliéres ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "5",
+                "question": "Est-ce que vous comptez sur un héritage ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "6",
+                "question": "Est-ce que vous prennez l'avion plus de 3 fois par ans ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "7",
+                "question": "Votre famille possède t-elle une jolie maison de famille ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 2 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "8",
+                "question": "êtes-vous déjà aller dans une manif de droite ?",
+                "answear": [
+                    { "type": "button", "content": "oui", "value": 1 },
+                    { "type": "button", "content": "non", "value": 0 }
+                ]
+            },
+            {
+                "id": "9",
+                "question": "Combien de ces activités avez-vous pratiquer ? Golfes, équitation, tennis, polo, voile",
+                "answear": [
+                    {
+                        "value": 1,
+                        "type": "number",
+                        "content": "undefined"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -22,7 +22,7 @@
 <style lang="scss">
     .card {
         all: unset;
-        height: 300px;
+        height: 400px;
         width: 400px;
         
         background-color: white;
@@ -30,8 +30,10 @@
         border-radius: 8px;
         margin-right: 15px;
         margin-bottom: 26px;
+        transition: 0.3s;
         &:hover {
             cursor: pointer;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
         }
     }
     .img {
@@ -45,5 +47,7 @@
     }
     .desc {
         font-weight: 400;
+        max-height: 80px;
+        overflow: hidden;
     }
 </style>

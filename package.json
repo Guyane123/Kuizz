@@ -13,11 +13,12 @@
     "@sveltejs/vite-plugin-svelte": "^2.0.4",
     "@tsconfig/svelte": "^4.0.1",
     "sass": "^1.69.4",
-    "svelte": "^3.58.0",
+    "svelte": "^3.59.2",
     "svelte-check": "^3.3.1",
     "svelte-routing": "^2.5.0",
     "tslib": "^2.5.0",
     "typescript": "^5.0.2",
+    "typescript-svelte-plugin": "^0.3.34",
     "vite": "^4.3.9"
   },
   "dependencies": {

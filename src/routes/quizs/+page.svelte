@@ -1,5 +1,6 @@
 
 <script>
+    import Navbar from "../../Component/Navbar/Navbar.svelte";
     import QuizList from "../../Component/QuizList/QuizList.svelte";
     import Title from "../../Component/Title/Title.svelte";
 
@@ -7,6 +8,8 @@
 
 
 <div class="page">
+
+    <Navbar />
     <section class="quiz">
         <div class="center">
             <Title>Quiz</Title>

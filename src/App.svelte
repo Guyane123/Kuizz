@@ -11,17 +11,14 @@
 
 <main>
   <Router>
-    <Layout>
       <slot />
       
-    </Layout>
     <div>
       <Route path="/" component={Home}/>
       <Route path="quizs" component={Quizs}/>
       <Route path="quizs/quiz/:slug" component={Quiz}/>
     </div>
   </Router>
-  <!-- <Footer /> -->
 </main>
 
 

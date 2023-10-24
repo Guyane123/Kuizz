@@ -11,5 +11,12 @@
 }
 
 body {
-    margin: 68px 240px;
+    margin: 150px 240px;
+    overflow-x: hidden;
 }
+
+@media (max-width: 480px) {
+    body {
+        margin: 150px 10px;
+    }
+} 

@@ -1,6 +1,7 @@
 <script>
     import Cta from "../Component/CTA/CTA.svelte";
     import Desc from "../Component/Desc/Desc.svelte";
+    import Navbar from "../Component/Navbar/Navbar.svelte";
     import QuizList from "../Component/QuizList/QuizList.svelte";
     import Title from "../Component/Title/Title.svelte";
 
@@ -9,6 +10,7 @@
 
 <div class="page">
 
+    <Navbar />
     
     <section class="hero">
         <div class="body">
@@ -17,7 +19,7 @@
                 <Desc>Testez-vous sur des quiz à thème divers et variés.</Desc>
             </div>
 
-            <Cta text="Voir les quiz !" link="/quiz">ddd</Cta>
+            <Cta link="/quizs">Voir les quiz !</Cta>
 
         </div>
     
