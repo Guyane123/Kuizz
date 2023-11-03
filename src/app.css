@@ -11,12 +11,20 @@
 }
 
 body {
-    margin: 150px 240px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem;
     overflow-x: hidden;
 }
 
 @media (max-width: 480px) {
     body {
-        margin: 150px 10px;
+        margin: 50px 10px;
     }
 } 
+
+a {
+    all: unset;
+    color: white;
+}

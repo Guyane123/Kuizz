@@ -1,9 +1,12 @@
-<script>
-    import Cta from "../Component/CTA/CTA.svelte";
-    import Desc from "../Component/Desc/Desc.svelte";
-    import Navbar from "../Component/Navbar/Navbar.svelte";
-    import QuizList from "../Component/QuizList/QuizList.svelte";
-    import Title from "../Component/Title/Title.svelte";
+<script lang="ts">
+    import Cta from "../lib/CTA/CTA.svelte";
+    import Desc from "../lib/Desc/Desc.svelte";
+    import Navbar from "../lib/Navbar/Navbar.svelte";
+    import QuizList from "../lib/QuizList/QuizList.svelte";
+    import Title from "../lib/Title/Title.svelte";
+    import Searchbar from "../lib/Searchbar/Searchbar.svelte";
+
+    let searchContent: string | undefined = undefined
 
 </script>
 
@@ -13,17 +16,23 @@
     <Navbar />
     
     <section class="hero">
+        
         <div class="body">
             <div>
                 <Title>Vous vous posez des questions ?</Title>
                 <Desc>Testez-vous sur des quiz à thème divers et variés.</Desc>
             </div>
 
-            <Cta link="/quizs">Voir les quiz !</Cta>
+            <div class="btn">
+                <Cta link="/quizs">Voir les quiz !</Cta>
+            </div>
+            
 
         </div>
-    
+
         <p class="logo"><span class="e">!</span><span class="q">?</span></p>
+    
+        
     </section>
 
 
@@ -33,12 +42,21 @@
         <div class="center">
             <Title>Quiz</Title>
         </div>
-        <QuizList />
+
+        <Searchbar  bind:search={searchContent}/> 
+
+        
+
+
+        <QuizList kuizz={searchContent} />
     </section>
 </div>
 
 
 <style lang="scss">
+    .body {
+        display: flex;
+    }
     .hero {
         display: flex;
         flex-direction: row-reverse;
@@ -47,7 +65,7 @@
     }
     .logo {
         color: var(--main);
-        font-size: 768px;
+        font-size: 40vw;
         font-weight: bold;
         margin: 0;
         display: flex;
@@ -62,16 +80,20 @@
     }
     @media(max-width: 1280px) {
         .hero {
-            margin-top: 200px;
-            display: flex;
             flex-direction: column;
             align-items: center;
-        
+
+        }
+        .logo {
+            font-size: 70vw;
         }
         .body {
-            text-align: center;
             justify-content: center;
-            align-items: center;
+        }
+        .btn {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
         }
     }
     .page {
@@ -82,10 +104,5 @@
         flex-direction: column;
         justify-content: space-around;
         
-    }
-    .center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 </style>

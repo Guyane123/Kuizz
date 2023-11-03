@@ -1,5 +1,7 @@
 
 <script lang="ts">
+    import { Link } from "svelte-routing";
+
     export let bgColor: string | undefined = "#4556DB";
     export let borderColor: string |undefined = "transparent";
     export let fontSize: number |undefined = 32;
@@ -13,9 +15,10 @@
 
 {#if link}
     <div class="btn">
-        <a class="a" href={link}>
-            <slot></slot>
-        </a>
+        <Link to={link}>
+            <p class="a" ><slot></slot></p>
+            
+        </Link>
     </div>
 {:else}
     <button class="btn" on:click style={`color: ${color};font-size: ${fontSize}px;background-color: ${bgColor}; border: solid 2px ${borderColor}; height: ${height}px; width: ${width}px`}>

@@ -2,11 +2,12 @@
     {
         "name": "number",
         "image": "https://cdn.pixabay.com/photo/2023/10/15/13/59/walnuts-8316999_1280.jpg",
-        "title": "Number title",
+        "title": "Kuizz sur des calcules simples",
         "link": "/quizs/quiz/number",
         "img": "./assets/bourgeoisie.png",
-        "desc": "Calculate !",
+        "desc": "Testez vos connaissance sur des simples calcules.",
         "minPoint": 3,
+        "maxPoint": 3,
         "resultText": "Vous êtes intelligent !",
         "questions": [
             {
@@ -44,9 +45,10 @@
         "name": "bourgeoisie",
         "img": "./bourgeoisie.png",
         "image": "https://cdn.pixabay.com/photo/2023/08/13/00/50/swallowtail-8186655_1280.jpg",
-        "title": "Test de bourgeoisie !",
+        "title": "Kuizz de bourgeoisie",
         "desc": "Suis-je un bourgeois ? Comment savoir si je suis un bourgeois ? Vous vous êtes déjà posé ces questions ? Si vous souhaitez y répondre, vous êtes au bonne endroit.",
         "minPoint": 10,
+        "maxPoint": 16,
         "link": "/quizs/quiz/bourgeoisie",
         "resultText": "Vous êtes un bourgeois !",
         "questions": [
@@ -122,6 +124,539 @@
                         "value": 1,
                         "type": "number",
                         "content": "undefined"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "mediterranee-antique",
+        "img": "./bourgeoisie.png",
+        "image": "https://cdn.pixabay.com/photo/2023/08/13/00/50/swallowtail-8186655_1280.jpg",
+        "title": "kuizz sur la Méditerranée antique (V - IV)",
+        "desc": "Testez vos connaissance sur la méditerannée antique !",
+        "minPoint": 6,
+        "maxPoint": 8,
+        "link": "/quizs/quiz/mediterranee-antique",
+        "resultText": "Vous connaissez la mediterranée antique !",
+        "questions": [
+            {
+                "id": "1",
+                "awaited": "490",
+                "question": "En combien avant JC a eu lieu la bataille du Marathon ?",
+                "answear": [
+                    { "type": "number", "content": "AV-JC", "value": 1 }
+                ]
+            },
+            {
+                "id": "2",
+                "question": "Comment pouvez-vous caractériser la démocratie athénienne ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "C'est une démocratie directe",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "C'est une démocratie indirecte ou représentative.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "question": "En combien avant JC a eu lieu la bataille de salamine ?",
+                "awaited": 480,
+                "answear": [
+                    { "type": "number", "content": "AV-JC", "value": 1 }
+                ]
+            },
+            {
+                "id": "4",
+                "question": "Quel définition correspond le mieu au mot clérouquie ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Fête national athénienne",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Expulsion temporaire d'un citoyen voté par l'Eclessia",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Envoie de population pauvre dans des territoires alliées pour les dominer",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "question": "Comment Périclés a contibué à renforcer la démocratie athénienne ? Séléctionner la mauvaise réponse.",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "En diminuant le nombre de citoyens",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "En donnant l'accès gratuit au théâtre aux pauvres",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "En créant une indemnité pour les citoyens siégent à l'Ecclesia (misthos)",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "En donnant le droit de vote aux femmes",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "6",
+                "question": "Comment Athénne devient un empire maritime ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Grâce à un très grand port de commerce",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Grâce aux perses",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Grâce au trésor de Dèlos",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "7",
+                "question": "Comment Athénne affirme sa puissance sur les alliées de la ligue de Dèlos ? Sélectionner la mauvaise réponse.",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Grâce à des clérouquies",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "En déplacant le trésor de la ligue à athénne",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Grâce aux perses",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "8",
+                "question": "Quand se déroule la bataille du Peloponèsse ? 431 - ?",
+                "answear": [
+                    { "type": "button", "content": "456", "value": 0 },
+                    { "type": "button", "content": "404", "value": 1 }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "sante-organismes",
+        "img": "https://cdn.pixabay.com/photo/2023/08/13/00/50/swallowtail-8186655_1280.jpg",
+        "image": "https://cdn.pixabay.com/photo/2023/08/13/00/50/swallowtail-8186655_1280.jpg",
+        "title": "Quiz sur les Organismes Unicellulaires et Pluricellulaires",
+        "desc": "Testez vos connaissances en biologie sur les organismes unicellulaires et pluricellulaires !",
+        "minPoint": 10,
+        "maxPoint": 20,
+        "link": "/quizs/quiz/sante-organismes",
+        "resultText": "Vous avez réussi l'évaluation sur les organismes unicellulaires et pluricellulaires !",
+        "questions": [
+            {
+                "id": "1",
+                "question": "Quelle est la principale caractéristique des organismes unicellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Ils sont constitués d'une seule cellule.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils sont toujours visibles à l'œil nu.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils ont des milliards de cellules.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "question": "Quelle est la principale différence entre les organismes unicellulaires et pluricellulaires en termes de nombre de cellules ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Les organismes pluricellulaires sont composés d'une seule cellule, tandis que les unicellulaires ont plusieurs cellules.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Les organismes unicellulaires sont composés d'une seule cellule, tandis que les pluricellulaires ont plusieurs cellules.",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "question": "Quel est l'avantage de la pluricellularité pour les organismes ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elle permet la spécialisation des cellules et l'exécution de fonctions spécifiques.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle rend les organismes plus fragiles.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle ne présente aucun avantage par rapport aux organismes unicellulaires.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "question": "Quelle est la fonction principale des cellules unicellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elles doivent accomplir toutes les fonctions vitales de l'organisme.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elles ne remplissent aucune fonction vitale.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "question": "Dans quel groupe d'organismes trouve-t-on principalement les unicellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Animaux et plantes.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Champignons et algues.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Bactéries et protistes.",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "6",
+                "question": "Quel est le rôle des tissus dans les organismes pluricellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Ils assurent des fonctions spécifiques, tels que le transport, la protection, ou la nutrition.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils sont inutiles dans les organismes pluricellulaires.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "7",
+                "question": "Quelle est la structure de base de tous les organismes vivants ?",
+                "answear": [
+                    { "type": "button", "content": "Le tissu.", "value": 0 },
+                    { "type": "button", "content": "La cellule.", "value": 1 },
+                    { "type": "button", "content": "L'organe.", "value": 0 }
+                ]
+            },
+            {
+                "id": "8",
+                "question": "Quel avantage la pluricellularité apporte-t-elle en termes de taille et de complexité des organismes ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elle permet d'atteindre de plus grandes tailles et une plus grande complexité.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle rend les organismes plus petits et moins complexes.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "9",
+                "question": "Quelle est la fonction des organes dans les organismes pluricellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Ils regroupent des tissus pour accomplir une fonction spécifique, comme le cœur pour la circulation sanguine.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils n'ont aucune fonction particulière.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "10",
+                "question": "Comment les cellules pluricellulaires assurent-elles leur communication et leur coordination ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elles ne peuvent pas communiquer ni se coordonner.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "À travers des signaux chimiques et des systèmes de communication internes.",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "11",
+                "question": "Quel est l'avantage de la reproduction asexuée pour les organismes unicellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elle permet une reproduction rapide et efficace.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle favorise la diversité génétique.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle nécessite deux partenaires pour se reproduire.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "12",
+                "question": "Quel est le rôle de la paroi cellulaire chez les bactéries ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elle offre un soutien structural et une protection.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle permet la photosynthèse.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle stocke de l'énergie.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "13",
+                "question": "Comment les organismes pluricellulaires obtiennent-ils de l'énergie pour leurs cellules ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Ils n'ont pas besoin d'énergie.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "À travers la respiration cellulaire et la photosynthèse.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "En ingérant d'autres organismes unicellulaires.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "14",
+                "question": "Quelle est la principale fonction des mitochondries dans les cellules eucaryotes ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elles stockent de l'ADN.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elles produisent de l'énergie sous forme d'ATP.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elles sont responsables de la division cellulaire.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "15",
+                "question": "Qu'est-ce que la photosynthèse ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "La décomposition des déchets organiques.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "La respiration des cellules animales.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Le processus par lequel les plantes convertissent la lumière du soleil en énergie chimique.",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "16",
+                "question": "Quel est le rôle du noyau dans une cellule eucaryote ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Il stocke des nutriments pour la cellule.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Il contient l'ADN et contrôle les activités cellulaires.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Il facilite la division cellulaire.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "17",
+                "question": "Quelle est la fonction des chloroplastes dans les cellules végétales ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Ils sont responsables de la photosynthèse.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils stockent de l'ADN.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Ils facilitent la division cellulaire.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "18",
+                "question": "Qu'est-ce que l'homéostasie dans un organisme pluricellulaire ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "La capacité à maintenir un environnement interne stable malgré les changements externes.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "La reproduction des cellules.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "La croissance rapide de l'organisme.",
+                        "value": 0
+                    }
+                ]
+            },
+            {
+                "id": "19",
+                "question": "Qu'est-ce que l'ADN ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Un composant cellulaire qui stocke de l'énergie.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Un composant des mitochondries.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "La molécule qui contient les instructions génétiques pour la construction et le fonctionnement des organismes.",
+                        "value": 1
+                    }
+                ]
+            },
+            {
+                "id": "20",
+                "question": "Quel est l'avantage de la reproduction sexuée par rapport à la reproduction asexuée dans les organismes pluricellulaires ?",
+                "answear": [
+                    {
+                        "type": "button",
+                        "content": "Elle est plus rapide et efficace.",
+                        "value": 0
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle favorise la diversité génétique et l'adaptation à l'environnement.",
+                        "value": 1
+                    },
+                    {
+                        "type": "button",
+                        "content": "Elle ne nécessite pas de partenaires.",
+                        "value": 0
                     }
                 ]
             }

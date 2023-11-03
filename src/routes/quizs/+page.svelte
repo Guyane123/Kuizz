@@ -1,8 +1,8 @@
 
 <script>
-    import Navbar from "../../Component/Navbar/Navbar.svelte";
-    import QuizList from "../../Component/QuizList/QuizList.svelte";
-    import Title from "../../Component/Title/Title.svelte";
+    import Navbar from "../../lib/Navbar/Navbar.svelte";
+    import QuizList from "../../lib/QuizList/QuizList.svelte";
+    import Title from "../../lib/Title/Title.svelte";
 
 </script>
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-    import Cta from "../../../Component/CTA/CTA.svelte";
-    import Desc from "../../../Component/Desc/Desc.svelte";
-    import Title from "../../../Component/Title/Title.svelte";
+    import Cta from "../../../lib/CTA/CTA.svelte";
+    import Desc from "../../../lib/Desc/Desc.svelte";
+    import Title from "../../../lib/Title/Title.svelte";
     import Logo from "../../../assets/kuizz.svg";
     import Quiz from "../../../assets/quiz.json";
     export let slug: string;
@@ -22,6 +22,12 @@
     let resultDesc: HTMLSpanElement | null;
     let logoAnchor: HTMLAnchorElement | null;
 
+    const currentQuiz = Quiz.find((quiz) => quiz.name == slug)!;
+
+    function shuffle(arr: typeof currentQuiz.questions) {
+        return arr.sort((a: any, b: any) => 0.5 - Math.random());
+    }
+
     let nextBtn: HTMLDivElement | null;
     let prevBtn: HTMLDivElement | null;
 
@@ -31,67 +37,73 @@
                 selectedElements[i] = currentFocusedElement;
             }
 
-            if (i <= currentQuiz.questions.length) {
-                nextBtn.style.visibility = "visible";
+            if (i <= currentQuiz!.questions.length) {
+                nextBtn!.style.visibility = "visible";
             } else {
-                nextBtn.style.visibility = "hidden";
+                nextBtn!.style.visibility = "hidden";
             }
             currentFocusedElement = null;
         } else {
-            nextBtn.style.visibility = "hidden";
+            nextBtn!.style.visibility = "hidden";
         }
 
         if (i >= 0) {
-            prevBtn.style.visibility = "visible";
+            prevBtn!.style.visibility = "visible";
         } else {
-            prevBtn.style.visibility = "hidden";
+            prevBtn!.style.visibility = "hidden";
         }
 
         if (i == -1) {
-            hero.style.display = "flex";
-            currentQuizSection.style.display = "none";
+            hero!.style.display = "flex";
+            currentQuizSection!.style.display = "none";
 
-            logoAnchor.style.visibility = "visible";
-        } else if (i === currentQuiz.questions.length) {
-            nextBtn.style.visibility = "hidden";
-            prevBtn.style.visibility = "hidden";
+            logoAnchor!.style.visibility = "visible";
+        } else if (i === currentQuiz!.questions.length) {
+            nextBtn!.style.visibility = "hidden";
+            prevBtn!.style.visibility = "hidden";
 
             let points = 0;
 
-            logoAnchor.style.visibility = "visible";
+            logoAnchor!.style.visibility = "visible";
 
             selectedElements.map((el, k) => {
-                const point = Number(el.getAttribute("data-point"));
-                if (el.type == "text" || el.type == "number") {
+                const point = Number(el!.getAttribute("data-point"));
+                if (el!.type == "text" || el!.type == "number") {
                     console.log(el);
-                    if (currentQuiz.questions[k].awaited) {
+                    if (currentQuiz!.questions[k].awaited) {
                         if (
-                            el.value ===
-                            String(currentQuiz.questions[k].awaited)
+                            el!.value ===
+                            String(currentQuiz!.questions[k].awaited)
                         ) {
                             points += point;
                         }
                     } else {
-                        points += Number(el.value);
+                        points += Number(el!.value);
                     }
                 } else {
                     points += point;
                 }
             });
 
-            if (points >= currentQuiz.minPoint) {
-                resultDesc.innerText = currentQuiz.resultText;
+            resultDesc!.innerHTML = `<br />${String(points)} / ${
+                currentQuiz.maxPoint
+            }`;
+            resultDesc!.innerHTML += `<br />${Math.floor(100 * currentQuiz.maxPoint / points)}% de bonnes réponses`;
+            resultDesc!.innerHTML += `<br />${Math.floor(20 * currentQuiz.maxPoint /points)}/20 de bonnes réponses`;
+
+            if (points >= currentQuiz!.minPoint) {
+                resultDesc!.innerHTML += `<br />${currentQuiz!.resultText}`;
             }
 
-            pointHTML.innerText = String(points);
+            pointHTML!.innerText = String(points);
 
-            result.style.display = "block";
+            result!.style.display = "block";
         } else {
-            logoAnchor.style.visibility = "hidden";
-            hero.style.display = "none";
-            currentQuizSection.style.display = "block";
+            logoAnchor!.style.visibility = "hidden";
+            hero!.style.display = "none";
+            currentQuizSection!.style.display = "block";
 
-            result.style.display = "none";
+            result!.style.display = "none";
         }
 
         const pagesArray = pages.querySelectorAll(".question");
@@ -99,13 +111,13 @@
         const nextEl = pagesArray[i + 1];
 
         if (prevEl) {
-            if (prevBtn.classList.contains("right")) {
+            if (prevBtn!.classList.contains("right")) {
                 prevEl.classList.remove("right");
             }
             prevEl.classList.add("left");
         }
         if (nextEl) {
-            if (prevBtn.classList.contains("next")) {
+            if (prevBtn!.classList.contains("next")) {
                 nextEl.classList.remove("left");
             }
             nextEl.classList.remove("left");
@@ -120,8 +132,7 @@
         });
     }
 
-    const currentQuiz = Quiz.find((quiz) => quiz.name == slug);
-    selectedElements = Array(currentQuiz.questions.length).fill(null);
+    selectedElements = Array(currentQuiz!.questions.length).fill(null);
 </script>
 
 <section class="hero" bind:this={hero}>
@@ -140,8 +151,8 @@
 <section class="currentQuiz" bind:this={currentQuizSection}>
     <form class="form">
         <div class="pages" bind:this={pages}>
-            {#each currentQuiz.questions as question}
-                <div class={`${question.id} question right`}>
+            {#each currentQuiz.questions as question, i (i)}
+                <div class={`${i} question right`}>
                     <div class="center">
                         <Title>{question.question}</Title>
                     </div>
@@ -157,7 +168,9 @@
                             />
                         {/each}
                     </div>
-                    <p class="pageNbr">{i + 1} / {currentQuiz.questions.length + 1}</p>
+                    <p class="pageNbr">
+                        {i + 1} / {currentQuiz.questions.length + 1}
+                    </p>
                 </div>
             {/each}
         </div>
@@ -170,7 +183,6 @@
         <Desc><span bind:this={resultDesc} /></Desc>
     </div>
 </section>
-
 
 <footer class="footer">
     <div bind:this={prevBtn} class="container">
@@ -207,17 +219,6 @@
     </div>
 </footer>
 
-<!-- <div class="page">
-    <p>
-        Suis-je un bourgeois ? Comment savoir si je suis un bourgeois ? Vous
-        vous êtes déjà posé ces questions ? Si vous souhaitez y répondre, vous
-        êtes au bonne endroit.
-    </p>
-
-    {data.text}
-
-    <a href="/quiz">Commencer le quiz !</a>
-</div> -->
 
 <style lang="scss">
     @media (max-width: 536px) {
@@ -268,11 +269,15 @@
     .logo {
         visibility: hidden;
     }
+    .logo:hover {
+        cursor: pointer;
+    }
     .img {
         margin-right: 32px;
     }
     .answears {
-        margin-top: 400px;
+        margin-top: 32px;
+        max-height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -280,7 +285,6 @@
 
     @media (max-width: 1124px) {
         .answears {
-            margin-top: 100px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -288,6 +292,9 @@
         input[type="button"] {
             margin-right: 32px !important;
             margin-bottom: 32px !important;
+        }
+        input {
+            font-size: 20px!important;
         }
     }
     .center {
@@ -309,7 +316,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 65px;
+        height: 100%;
         width: 400px;
         color: black;
         display: flex;
@@ -365,13 +372,16 @@
     .hero {
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-bottom: 100px;
     }
     @media (max-width: 700px) {
         .img {
             width: 300px;
             height: 200px;
+        }
+        .page {
+            margin-top: 0px;
         }
     }
     @media (max-width: 1280px) {
@@ -381,7 +391,6 @@
             align-items: center;
         }
         .body {
-            text-align: center;
             justify-content: center;
             align-items: center;
         }

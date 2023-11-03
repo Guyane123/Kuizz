@@ -16,6 +16,7 @@
         display: flex;
         justify-content: center;
         margin-left: 0px;
+        z-index: 10;
         top: 0;
         left: 0;
         width: 100vw;

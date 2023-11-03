@@ -1,5 +1,5 @@
 {
-  "name": "bourgeoistest",
+  "name": "svelte",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,18 +10,16 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^2.0.4",
-    "@tsconfig/svelte": "^4.0.1",
-    "sass": "^1.69.4",
-    "svelte": "^3.59.2",
-    "svelte-check": "^3.3.1",
-    "svelte-routing": "^2.5.0",
-    "tslib": "^2.5.0",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
+    "@tsconfig/svelte": "^5.0.0",
+    "sass": "^1.69.5",
+    "svelte": "^4.0.5",
+    "svelte-check": "^3.4.6",
+    "tslib": "^2.6.0",
     "typescript": "^5.0.2",
-    "typescript-svelte-plugin": "^0.3.34",
-    "vite": "^4.3.9"
+    "vite": "^4.4.5"
   },
   "dependencies": {
-    "@sveltejs/kit": "^1.26.0"
+    "svelte-routing": "^2.5.0"
   }
 }
